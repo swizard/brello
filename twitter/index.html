@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <!--<script src="http://code.angularjs.org/1.0.2/angular.min.js"></script>-->
+  <!--<script src="http://code.angularjs.org/1.0.2/angular-resource.min.js"></script>-->
+  <!--<script type="text/javascript" src="twitter.js"></script>-->
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script type="text/javascript" src="../lib/angular.js"></script>
+  <script type="text/javascript" src="../lib/angular-resource.js"></script>
+</head>
+<script type="text/javascript">
+  var myApp = angular.module('MyApp', []);
+  myApp.directive('tabs', function () {
+
+    return function (scope, element, attrs) {
+
+    }
+  });
+  var TwitterCtrl = function ($scope) {
+    $scope.todos = [{name:"woo"},{name:"eric"}]
+    $scope.hello = function () {
+      return "xxx"
+    }
+  }
+</script>
+
+<body ng-controller="TwitterCtrl">
+
+<h1>hello world google </h1>
+<h2>hi</h2>
+<p>{{hello()}}</p>
+<dl>
+  <li ng-repeat="todo in todos">
+    {{todo.name}}
+  </li>
+</dl>
+
+</body>
+</html>
